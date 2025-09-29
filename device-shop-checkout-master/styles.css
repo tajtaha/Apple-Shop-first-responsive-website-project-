@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#top-bg {
+  height: 30vh;
+  width: 100%;
+  background: url("resources/background-image.png") no-repeat center center/cover;
+  position: relative;
+}
+
+#checkout-text {
+  position: absolute;
+  top: 5%; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+#checkout-text span {
+  background: #1d1d1f;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
