@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: -apple-system, "San Francisco", "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;       /* readable, bold enough for system font */
+  font-weight: 500;       /* semi-bold like Apple UI */
 }
 
 #top-bg {
@@ -12,12 +14,12 @@ body {
 
 #checkout-text {
   position: absolute;
-  top: 5%; 
+  top: 3%; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;            /* slightly wider gap like Apple UI */
   font-size: 2rem;
   color: #fff;
 }
@@ -25,11 +27,126 @@ body {
 #checkout-text span {
   background: #1d1d1f;
   color: #fff;
-  padding: 6px 14px;
+  padding: 6px 16px;    /* Apple-style pill padding */
   border-radius: 999px;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#main-window {
+  display: flex;
+  width: 95%;
+  height: 670px;
+  border-radius: 16px;   /* Apple-style rounded corners */
+  overflow: hidden; 
+  margin: -100px auto 0 auto;
+  position: relative;
+  z-index: 1;   
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);  /* slightly stronger shadow */
+}
+
+#left-side,
+#right-side {
+  flex: 0 0 50%; 
+  display: flex;
+}
+
+#right-side {
+  background-color: #fff;
+  flex-direction: column;
+  padding: 24px 32px;    /* Apple-style padding */
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+#left-side {
+  background-color: #e6e7eb;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading */
+#right-side h2 {
+  font-size: 1.2rem;
+  margin: 0 0 16px 0;   /* Apple spacing under heading */
+  font-weight: 600;
+}
+
+/* Labels */
+form label {
+  margin-bottom: 8px;   /* Apple label → input spacing */
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;  /* Apple spacing between stacked items */
+}
+
+/* Row for country + postal code */
+.form-row {
+  display: flex;
+  gap: 16px;             /* Apple-style horizontal spacing */
+  width: 100%;
+}
+
+.form-row .form-item {
+  flex: 1;
+}
+
+/* Form container */
+form {
+  display: grid;
+  gap: 20px;             /* Apple-style vertical gap between blocks */
+  width: 100%;
+}
+
+.regular-label {
+  margin-bottom: -10px;
+}
+
+/* Inputs */
+.large-input,
+#country,
+#postal-code {
+  padding-right: 30px;   /* pushes text away from arrow and ensures arrow isn't flush to edge */ 
+  border: 1px solid #d8dbdf;
+  border-radius: 10px;  
+  width: 100%;
+  height: 60px;           /* Apple-style input height */
+  background-color: #f3f4f6;
+  padding: 0 14px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Button */
+button {
+  border: 0;
+  width: 100%; 
+  border-radius: 10px;
+  color: #fff;
+  background-color: #1d1d1f;
+  height: 60px;            /* Apple-style button height */
+  font-size: 1rem;
+  font-weight: 400;       /* Apple-style spacing above button */
+}
+
+/* Chrome, Edge, Safari */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

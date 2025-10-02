@@ -12,5 +12,39 @@
     <div id="checkout-text-div">
         <h1 id="checkout-text"> Checkout <span id="item-count">3 ITEMS</span></h1>
     </div>
+    <div id="main-window">
+        <div id="left-side"></div>
+
+        <div id="right-side">
+            <form>
+            <h2>Contanct Information</h2>
+        
+            <label for="name" class="regular-label">First & Last name</label>
+            <input class="large-input" placeholder="Enter first & last name" id="name" type="text">
+        
+            <label for="email" class="regular-label">Email Address</label>
+            <input class="large-input" placeholder="Enter email address" id="email" type="email">
+            
+            <div class="form-row">
+
+                <div class="form-item">
+                    <label for="country">Country</label>
+                    <select name="dropdown" id="country">
+                        <option value="iran">iran</option>
+                        <option value="united-states" selected>United States</option>
+                        <option value="finland">finland</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label for="postal-code">Postal Code</label>
+                    <input placeholder="00270" id="postal-code" type="number">
+                </div>
+            </div>
+
+            <button id="submit" type="submit">Continue</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
