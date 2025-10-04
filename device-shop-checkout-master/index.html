@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +8,63 @@
 
     <title>Checkout 3 items - Apple Shop</title>
 </head>
+
 <body>
     <div id="top-bg"></div>
     <div id="checkout-text-div">
         <h1 id="checkout-text"> Checkout <span id="item-count">3 ITEMS</span></h1>
     </div>
     <div id="main-window">
-        <div id="left-side"></div>
-
-        <div id="right-side">
-            <form>
-            <h2>Contanct Information</h2>
-        
-            <label for="name" class="regular-label">First & Last name</label>
-            <input class="large-input" placeholder="Enter first & last name" id="name" type="text">
-        
-            <label for="email" class="regular-label">Email Address</label>
-            <input class="large-input" placeholder="Enter email address" id="email" type="email">
-            
-            <div class="form-row">
-
-                <div class="form-item">
-                    <label for="country">Country</label>
-                    <select name="dropdown" id="country">
-                        <option value="iran">iran</option>
-                        <option value="united-states" selected>United States</option>
-                        <option value="finland">finland</option>
-                    </select>
+        <div id="left-side">
+            <div class="item-cart">
+                <div class="img-container">
+                    <img src="resources/Gold.png" srcset="resources/Gold.png 1x, resources/Gold@2x.png 2x"
+                        alt="iPhone 12 Pro" class="item-image">
                 </div>
 
-                <div class="form-item">
-                    <label for="postal-code">Postal Code</label>
-                    <input placeholder="00270" id="postal-code" type="number">
+                <div class="details">
+                    <h4 class="item-name">iPhone 12 Pro</h4>
+                    <p class="item-color">Golden</p>
+                    <p class="item-number">x 1</p>
+                </div>
+
+                <div class="price-remove">
+                    <h4 class="item-price">$999.00</h4>
+                    <button class="remove-item-btn">×</button>
                 </div>
             </div>
+        </div>
+        <div id="right-side">
+            <form>
+                <h2>Contanct Information</h2>
 
-            <button id="submit" type="submit">Continue</button>
+                <label for="name" class="regular-label">First & Last name</label>
+                <input class="large-input" placeholder="Enter first & last name" id="name" type="text">
+
+                <label for="email" class="regular-label">Email Address</label>
+                <input class="large-input" placeholder="Enter email address" id="email" type="email">
+
+                <div class="form-row">
+
+                    <div class="form-item">
+                        <label for="country">Country</label>
+                        <select name="dropdown" id="country">
+                            <option value="iran">iran</option>
+                            <option value="united-states" selected>United States</option>
+                            <option value="finland">finland</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="postal-code">Postal Code</label>
+                        <input placeholder="00270" id="postal-code" type="number">
+                    </div>
+                </div>
+
+                <button id="submit" type="submit">Continue</button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
