@@ -118,19 +118,25 @@ form {
   padding-right: 30px;   /* pushes text away from arrow and ensures arrow isn't flush to edge */ 
   border: 1px solid #d8dbdf;
   border-radius: 10px;  
-  width: 100%;
+  width: 93%;
   height: 60px;           /* Apple-style input height */
   background-color: #f3f4f6;
-  padding: 0 14px;
+  padding: 0 7px;
   box-sizing: border-box;
   font-size: 1rem;
   font-weight: 500;
 }
 
+
+#postal-code {
+  width: 86%;
+}
+
+
 /* Button */
 button {
   border: 0;
-  width: 100%; 
+  width: 93%; 
   border-radius: 10px;
   color: #fff;
   background-color: #1d1d1f;
@@ -178,14 +184,21 @@ input[type=number] {
   background-color: #f3f4f6;
   border-radius: 20px;
   border: 1px solid #d8dbdf;
-  width: 70px;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-image {
-  height: 100px;
-  object-fit: cover;
+  width: 80px;       /* smaller than container */
+  height: 80px;      /* smaller than container */
+  object-fit: contain; /* keep aspect ratio */
   border-radius: 8px;
+  display: block;     /* ensures margin:auto works */
 }
+
 
 .details {
   flex: 1;                  /* take middle space */
@@ -221,3 +234,13 @@ input[type=number] {
 .remove-item-btn:hover {
   color: #333;
 }
+
+hr {
+  border: none;              /* remove default line */
+  height: 1px;               /* thickness */
+  background-color: #ccc;    /* color */
+  width: 95%;                /* shorter line */
+  margin: 10px auto 0 auto;  /* top margin and horizontally centered */
+}
+
+
