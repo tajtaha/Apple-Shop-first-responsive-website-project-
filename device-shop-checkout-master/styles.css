@@ -1,9 +1,10 @@
 body {
-  margin: 0;
-  font-family: -apple-system, "San Francisco", "Segoe UI", Roboto, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-}
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
 
 * {
   box-sizing: border-box;
@@ -23,8 +24,7 @@ body {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 2rem;
+  gap: 15px;
   color: #fff;
 }
 
@@ -33,17 +33,16 @@ body {
   color: #fff;
   padding: 6px 16px;
   border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: small;
 }
 
 #main-window {
   display: flex;
   width: 95%;
-  height: 630px;
+  height: 650px;
   border-radius: 16px;
   overflow: hidden;
   margin: -100px auto 0;
@@ -73,9 +72,7 @@ body {
 }
 
 #right-side h2 {
-  font-size: 1.2rem;
   margin-bottom: 16px;
-  font-weight: 600;
 }
 
 form {
@@ -101,17 +98,18 @@ form {
 #country,
 #postal-code,
 #coupon-input {
-  padding: 0 7px;
   border: 1px solid #d8dbdf;
   border-radius: 10px;
   height: 60px;
   background-color: #f3f4f6;
-  font-size: 1rem;
-  font-weight: 500;
+}
+
+#country {
+  margin-top: 15px;
 }
 
 #postal-code {
-  flex: 1;
+  margin-top: 15px;
 }
 
 #submit-button,
@@ -121,8 +119,7 @@ form {
   color: #fff;
   background-color: #1d1d1f;
   height: 60px;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: large;
 }
 
 .item-cart {
@@ -139,10 +136,10 @@ form {
   flex-shrink: 0;
   margin-right: 12px;
   background-color: #f3f4f6;
-  border-radius: 20px;
+  border-radius: 12px;
   border: 1px solid #d8dbdf;
-  height: 90px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,16 +166,21 @@ form {
   gap: 10px;
 }
 
+.item-color {
+  margin-top: -16px;
+}
+
 .item-price {
-  margin-right: 30px;
+  margin-right: 0px;
 }
 
 .remove-item-btn {
   background: none;
   border: none;
-  font-size: 20px;
   cursor: pointer;
   color: #999;
+  margin-top: 30px;
+  margin-left: 45px;
 }
 
 .remove-item-btn:hover {
@@ -196,11 +198,12 @@ hr {
 }
 
 #coupon-input {
-  width: 70%;
+  width: 75%;
+  background-color: #ffffff;
 }
 
 #input-button {
-  width: 30%;
+  width: 25%;
 }
 
 .details-row {
@@ -216,6 +219,10 @@ hr {
 
 .checkout-details .details-row h3 {
   margin-left: auto;
+}
+
+.lighter-detail {
+  color: #3c3c3d;
 }
 
 #left-side > hr {
