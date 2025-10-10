@@ -168,6 +168,11 @@ form {
 
 .item-color {
   margin-top: -16px;
+  color: #525252;
+}
+
+.item-number {
+  color: #525252;
 }
 
 .item-price {
@@ -204,6 +209,11 @@ hr {
 
 #input-button {
   width: 25%;
+}
+
+input::placeholder {
+  font-size: 17px;
+  color: #706f6f;
 }
 
 .details-row {
@@ -286,4 +296,11 @@ input[type=number] {
   #input-button {
     width: 35%;
   }
+  .item-color {
+  color: #525252;
+}
+
+.item-number {
+  color: #525252;
+}
 }
