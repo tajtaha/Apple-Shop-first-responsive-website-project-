@@ -2,10 +2,31 @@
 <html lang="en">
 
 <head>
+    <style>
+            body {
+        margin: 0;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        }
+
+    *   {
+     box-sizing: border-box;
+    }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple checkout page for an online Apple shop.">
     <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="image" href="resources/background-image.png">
+    <link rel="preload" href="./styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./styles.css"></noscript>
     <title>Checkout 3 items - Apple Shop</title>
 </head>
 
@@ -23,14 +44,14 @@
                 </div>
 
                 <div class="details">
-                    <h4 class="item-name">iPhone 12 Pro</h4>
+                    <h3 class="item-name">iPhone 12 Pro</h3>
                     <p class="item-color">Golden</p>
                     <p class="item-number">x 1</p>
                 </div>
 
                 <div class="price-remove">
-                    <h4 class="item-price">$999.00</h4>
-                    <button class="remove-item-btn"><img src="resources/close-icon.svg"></button>
+                    <p class="item-price">$999.00</p>
+                    <button class="remove-item-btn" aria-label="Remove Item"><img src="resources/close-icon.svg" alt="close-icon"></button>
                 </div>
             </div>
             
@@ -49,7 +70,7 @@
 
                 <div class="price-remove">
                     <h4 class="item-price">$399.00</h4>
-                    <button class="remove-item-btn"><img src="resources/close-icon.svg"></button>
+                    <button class="remove-item-btn" aria-label="Remove Item"><img src="resources/close-icon.svg" alt="close-icon"></button>
                 </div>
             </div>
 
@@ -68,7 +89,7 @@
 
                 <div class="price-remove">
                     <h4 class="item-price">$1199.00</h4>
-                    <button class="remove-item-btn"><img src="resources/close-icon.svg"></button>
+                    <button class="remove-item-btn" aria-label="Remove Item"><img src="resources/close-icon.svg" alt="close-icon"></button>
                 </div>
 
                 
@@ -79,23 +100,23 @@
             
             <div class="coupon-row">
                 <input type="text" name="coupon-input" id="coupon-input" placeholder="  Enter coupon code">
-                <button id="input-button">Apply Coupon</button>
+                <button id="input-button" aria-label="Apply Coupon Discount">Apply Coupon</button>
             </div>
             
             <div class="checkout-details">
                 <div class="details-row">
                     <p class="lighter-detail">Sub Total</p>
-                    <h3 class="lighter-detail">$2597.00</h3>
+                    <p class="checkout-price">$2597.00</p>
                 </div>
 
                 <div class="details-row">
                     <p class="lighter-detail">Tax</p>
-                    <h3 class="lighter-detail">$623.28</h3>
+                    <p class="checkout-price">$623.28</p>
                 </div>
                 
                 <div class="details-row">
-                    <p>Total</p>
-                    <h3>$3220.28</h3>
+                    <p id="total-text">Total</p>
+                    <p id="total-price">$3220.28</p>
                 </div>
             </div>
         </div>
@@ -122,11 +143,11 @@
 
                     <div class="form-item">
                         <label for="postal-code">Postal Code</label>
-                        <input placeholder="    00270" id="postal-code" type="number">
+                        <input placeholder="    00270" id="postal-code">
                     </div>
                 </div>
 
-                <button id="submit-button" type="submit">Continue</button>
+                <button id="submit-button" type="submit" aria-label="Submit the Contact Information">Continue</button>
             </form>
         </div>
     </div>

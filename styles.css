@@ -1,15 +1,3 @@
-body {
-    margin: 0;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0;
-  }
-
-* {
-  box-sizing: border-box;
-}
-
 #top-bg {
   height: 30vh;
   width: 100%;
@@ -227,12 +215,32 @@ input::placeholder {
   white-space: nowrap;
 }
 
-.checkout-details .details-row h3 {
+.checkout-details .details-row #total-price {
   margin-left: auto;
 }
 
-.lighter-detail {
+.lighter-detail, .checkout-price {
   color: #3c3c3d;
+}
+
+#total-text, #total-price, .lighter-detail, .checkout-price {
+  font-weight: 800;
+}
+
+.checkout-details .details-row {
+  display: flex;       /* makes left and right items align horizontally */
+  align-items: center; /* vertical alignment */
+}
+
+.checkout-details .details-row p:first-child {
+  /* Left side label stays on left */
+  margin: 0;           
+}
+
+.checkout-details .details-row p:last-child {
+  /* Right side price moves to the right */
+  margin-left: auto;
+
 }
 
 #left-side > hr {
@@ -251,8 +259,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
+hr {
+  border: 1px solid #000;
 }
 
 @media (max-width: 480px) {
