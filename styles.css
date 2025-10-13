@@ -157,6 +157,10 @@ form {
   font-weight: 700;
 }
 
+.item-count {
+  min-width: 4ch
+}
+
 .item-color {
   margin-top: -16px;
   color: #525252;
