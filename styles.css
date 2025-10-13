@@ -1,7 +1,6 @@
 #top-bg {
   height: 30vh;
   width: 100%;
-  background: url("resources/background-image.png") no-repeat center/cover;
   position: relative;
 }
 
@@ -229,7 +228,7 @@ input::placeholder {
 }
 
 #total-text, #total-price, .lighter-detail, .checkout-price {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .checkout-details .details-row {
