@@ -154,6 +154,10 @@ form {
   gap: 10px;
 }
 
+.item-name {
+  font-weight: 700;
+}
+
 .item-color {
   margin-top: -16px;
   color: #525252;
@@ -165,6 +169,7 @@ form {
 
 .item-price {
   margin-right: 0px;
+  font-weight: 700;
 }
 
 .remove-item-btn {
