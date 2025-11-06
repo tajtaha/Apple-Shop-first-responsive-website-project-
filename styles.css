@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+  font-family: "Stack Sans Text", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 #top-bg {
   height: 30vh;
   width: 100%;
@@ -28,8 +37,8 @@
 
 #main-window {
   display: flex;
-  width: 95%;
-  height: 650px;
+  width: 90%;
+  height: 660px;
   border-radius: 16px;
   overflow: hidden;
   margin: -130px auto 0;
@@ -93,6 +102,7 @@ form {
 
 #country {
   margin-top: 15px;
+  padding-left: 15px;
 }
 
 #postal-code {
@@ -158,7 +168,7 @@ form {
 }
 
 .item-count {
-  min-width: 4ch
+  min-width: 4ch;
 }
 
 .item-color {
@@ -172,7 +182,7 @@ form {
 
 .item-price {
   margin-right: 0px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .remove-item-btn {
@@ -196,15 +206,17 @@ hr {
   display: flex;
   gap: 12px;
   align-items: center;
+  padding-left: 13px;
 }
 
 #coupon-input {
-  width: 75%;
+  padding-left: 10px;
+  width: 70%;
   background-color: #ffffff;
 }
 
 #input-button {
-  width: 25%;
+  width: 26%;
 }
 
 input::placeholder {
@@ -227,28 +239,35 @@ input::placeholder {
   margin-left: auto;
 }
 
-.lighter-detail, .checkout-price {
+.lighter-detail,
+.checkout-price {
   color: #3c3c3d;
 }
 
-#total-text, #total-price, .lighter-detail, .checkout-price {
-  font-weight: 600;
+#total-text,
+#total-price,
+.lighter-detail,
+.checkout-price {
+  font-weight: 500;
 }
 
 .checkout-details .details-row {
-  display: flex;       /* makes left and right items align horizontally */
+  display: flex; /* makes left and right items align horizontally */
   align-items: center; /* vertical alignment */
 }
 
 .checkout-details .details-row p:first-child {
   /* Left side label stays on left */
-  margin: 0;           
+  margin: 0;
 }
 
 .checkout-details .details-row p:last-child {
   /* Right side price moves to the right */
   margin-left: auto;
+}
 
+.checkout-details {
+  padding-left: 15px;
 }
 
 #left-side > hr {
@@ -261,8 +280,8 @@ input::placeholder {
   margin-right: auto;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -299,24 +318,24 @@ hr {
   .item-cart {
     margin-top: -30px;
   }
-  
+
   input::placeholder {
-  font-size: 20px;
-  color: #706f6f;
-}
+    font-size: 20px;
+    color: #706f6f;
+  }
 
   #coupon-input {
-  width: 65%;
+    width: 65%;
   }
 
   #input-button {
     width: 35%;
   }
   .item-color {
-  color: #525252;
-}
+    color: #525252;
+  }
 
-.item-number {
-  color: #525252;
-}
+  .item-number {
+    color: #525252;
+  }
 }
