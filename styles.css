@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Stack Sans Text", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 * {
@@ -182,7 +182,7 @@ form {
 
 .item-price {
   margin-right: 0px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .remove-item-btn {
@@ -248,7 +248,7 @@ input::placeholder {
 #total-price,
 .lighter-detail,
 .checkout-price {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .checkout-details .details-row {

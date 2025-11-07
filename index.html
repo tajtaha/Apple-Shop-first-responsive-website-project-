@@ -14,208 +14,218 @@
       href="resources/background-image.webp"
       imagesrcset="resources/background-image.webp"
       imagesizes="100vw"
+      fetchpriority="high"
     />
-    <link
-      rel="preload"
-      href="./styles.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+
+    <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200..700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <title>Checkout 3 items - Apple Shop</title>
   </head>
 
   <body>
-    <div id="top-bg-div">
-      <img
-        src="resources/background-image.webp"
-        alt="Shop hero image"
-        id="top-bg"
-        width="1920"
-        height="600"
-        fetchpriority="high"
-      />
-    </div>
-    <div id="checkout-text-div">
-      <h1 id="checkout-text">Checkout <span id="item-count">3 ITEMS</span></h1>
-    </div>
-    <div id="main-window">
-      <div id="left-side">
-        <div class="item-cart">
-          <div class="img-container">
-            <img
-              src="resources/Gold.webp"
-              srcset="resources/Gold.webp 1x, resources/Gold@2x.webp 2x"
-              alt="iPhone 12 Pro"
-              class="item-image"
-              width="80"
-              height="80"
-            />
-          </div>
-
-          <div class="details">
-            <p class="item-name">iPhone 12 Pro</p>
-            <p class="item-color">Golden</p>
-            <p class="item-number">x 1</p>
-          </div>
-
-          <div class="price-remove">
-            <p class="item-price">$999.00</p>
-            <button class="remove-item-btn" aria-label="Remove Item">
-              <img
-                src="resources/close-icon.svg"
-                alt="close-icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div class="item-cart">
-          <div class="img-container">
-            <img
-              src="resources/Apple-watch.webp"
-              srcset="
-                resources/Apple-watch.webp   1x,
-                resources/Apple-watchx2.webp 2x
-              "
-              alt="Apple Watch"
-              class="item-image"
-              width="80"
-              height="80"
-            />
-          </div>
-
-          <div class="details">
-            <p class="item-name">Apple Watch</p>
-            <p class="item-color">Blue</p>
-            <p class="item-number">x 1</p>
-          </div>
-
-          <div class="price-remove">
-            <p class="item-price">$399.00</p>
-            <button class="remove-item-btn" aria-label="Remove Item">
-              <img
-                src="resources/close-icon.svg"
-                alt="close-icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-        </div>
-
-        <div class="item-cart">
-          <div class="img-container">
-            <img
-              src="resources/iMac.webp"
-              srcset="resources/iMac.webp 1x, resources/iMac@2x.webp 2x"
-              alt="iMac"
-              class="item-image"
-              width="80"
-              height="80"
-            />
-          </div>
-
-          <div class="details">
-            <p class="item-name">iMac</p>
-            <p class="item-color">Green</p>
-            <p class="item-number">x 1</p>
-          </div>
-
-          <div class="price-remove">
-            <p class="item-price">$1199.00</p>
-            <button class="remove-item-btn" aria-label="Remove Item">
-              <img
-                src="resources/close-icon.svg"
-                alt="close-icon"
-                width="24"
-                height="24"
-              />
-            </button>
-          </div>
-        </div>
-
-        <hr />
-
-        <div class="coupon-row">
-          <input
-            type="text"
-            name="coupon-input"
-            id="coupon-input"
-            placeholder=" Enter coupon code"
-          />
-          <button id="input-button" aria-label="Apply Coupon Discount">
-            Apply Coupon
-          </button>
-        </div>
-
-        <div class="checkout-details">
-          <div class="details-row">
-            <p class="lighter-detail">Sub Total</p>
-            <p class="checkout-price">$2597.00</p>
-          </div>
-
-          <div class="details-row">
-            <p class="lighter-detail">Tax</p>
-            <p class="checkout-price">$623.28</p>
-          </div>
-
-          <div class="details-row">
-            <p id="total-text">Total</p>
-            <p id="total-price">$3220.28</p>
-          </div>
-        </div>
+    <header>
+      <div id="top-bg-div">
+        <img
+          src="resources/background-image.webp"
+          id="top-bg"
+          width="1280"
+          height="240"
+          fetchpriority="high"
+        />
       </div>
-      <div id="right-side">
-        <form>
-          <h2>Contact Information</h2>
-
-          <label for="name" class="regular-label">First & Last name</label>
-          <input
-            class="large-input"
-            placeholder="  Enter first & last name"
-            id="name"
-            type="text"
-          />
-
-          <label for="email" class="regular-label">Email Address</label>
-          <input
-            class="large-input"
-            placeholder="  Enter email address"
-            id="email"
-            type="email"
-          />
-
-          <div class="form-row">
-            <div class="form-item">
-              <label for="country">Country</label>
-              <select name="dropdown" id="country">
-                <option value="iran">Iran</option>
-                <option value="united-states">United States</option>
-                <option value="finland" selected>Finland</option>
-              </select>
+      <div id="checkout-text-div">
+        <h1 id="checkout-text">
+          Checkout <span id="item-count">3 ITEMS</span>
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div id="main-window">
+        <div id="left-side">
+          <div class="item-cart">
+            <div class="img-container">
+              <img
+                src="resources/Gold.webp"
+                srcset="resources/Gold.webp 1x, resources/Gold@2x.webp 2x"
+                alt="iPhone 12 Pro"
+                class="item-image"
+                width="80"
+                height="80"
+              />
             </div>
 
-            <div class="form-item">
-              <label for="postal-code">Postal Code</label>
-              <input placeholder="   00270" id="postal-code" />
+            <div class="details">
+              <p class="item-name">iPhone 12 Pro</p>
+              <p class="item-color">Golden</p>
+              <p class="item-number">x 1</p>
+            </div>
+
+            <div class="price-remove">
+              <p class="item-price">$999.00</p>
+              <button class="remove-item-btn" aria-label="Remove Item">
+                <img
+                  src="resources/close-icon.svg"
+                  alt="close-icon"
+                  width="24"
+                  height="24"
+                />
+              </button>
             </div>
           </div>
 
-          <button id="submit-button" type="submit" aria-label="continue">
-            Continue
-          </button>
-        </form>
+          <div class="item-cart">
+            <div class="img-container">
+              <img
+                src="resources/Apple-watch.webp"
+                srcset="
+                  resources/Apple-watch.webp   1x,
+                  resources/Apple-watchx2.webp 2x
+                "
+                alt="Apple Watch"
+                class="item-image"
+                width="80"
+                height="80"
+              />
+            </div>
+
+            <div class="details">
+              <p class="item-name">Apple Watch</p>
+              <p class="item-color">Blue</p>
+              <p class="item-number">x 1</p>
+            </div>
+
+            <div class="price-remove">
+              <p class="item-price">$399.00</p>
+              <button class="remove-item-btn" aria-label="Remove Item">
+                <img
+                  src="resources/close-icon.svg"
+                  alt="close-icon"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="item-cart">
+            <div class="img-container">
+              <img
+                src="resources/iMac.webp"
+                srcset="resources/iMac.webp 1x, resources/iMac@2x.webp 2x"
+                alt="iMac"
+                class="item-image"
+                width="80"
+                height="80"
+              />
+            </div>
+
+            <div class="details">
+              <p class="item-name">iMac</p>
+              <p class="item-color">Green</p>
+              <p class="item-number">x 1</p>
+            </div>
+
+            <div class="price-remove">
+              <p class="item-price">$1199.00</p>
+              <button class="remove-item-btn" aria-label="Remove Item">
+                <img
+                  src="resources/close-icon.svg"
+                  alt="close-icon"
+                  width="24"
+                  height="24"
+                />
+              </button>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="coupon-row">
+            <input
+              type="text"
+              name="coupon-input"
+              id="coupon-input"
+              placeholder=" Enter coupon code"
+            />
+            <button id="input-button" aria-label="Apply Coupon Discount">
+              Apply Coupon
+            </button>
+          </div>
+
+          <div class="checkout-details">
+            <div class="details-row">
+              <p class="lighter-detail">Sub Total</p>
+              <p class="checkout-price">$2597.00</p>
+            </div>
+
+            <div class="details-row">
+              <p class="lighter-detail">Tax</p>
+              <p class="checkout-price">$623.28</p>
+            </div>
+
+            <div class="details-row">
+              <p id="total-text">Total</p>
+              <p id="total-price">$3220.28</p>
+            </div>
+          </div>
+        </div>
+        <div id="right-side">
+          <form>
+            <h2>Contact Information</h2>
+
+            <label for="name" class="regular-label">First & Last name</label>
+            <input
+              class="large-input"
+              placeholder="  Enter first & last name"
+              id="name"
+              type="text"
+            />
+
+            <label for="email" class="regular-label">Email Address</label>
+            <input
+              class="large-input"
+              placeholder="  Enter email address"
+              id="email"
+              type="email"
+            />
+
+            <div class="form-row">
+              <div class="form-item">
+                <label for="country">Country</label>
+                <select name="dropdown" id="country">
+                  <option value="iran">Iran</option>
+                  <option value="united-states">United States</option>
+                  <option value="finland" selected>Finland</option>
+                </select>
+              </div>
+
+              <div class="form-item">
+                <label for="postal-code">Postal Code</label>
+                <input placeholder="   00270" id="postal-code" />
+              </div>
+            </div>
+
+            <button id="submit-button" type="submit" aria-label="continue">
+              Continue
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
